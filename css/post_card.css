@@ -1,0 +1,224 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.post {
+  background-color: white;
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 0.8rem;
+  margin-bottom: 2rem;
+  margin-right: 20rem;
+  margin-left: 20rem;
+}
+
+.post__img {
+  flex: 1;
+  padding: 2rem 2rem 2rem 0rem;
+}
+
+.post__img img {
+  max-width: 18rem;
+  min-width: 18rem;
+  max-height: 11rem;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.8rem;
+  transform: translateX(-50px);
+  box-shadow: 1rem 1.4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
+.post__info {
+  flex: 2;
+  padding: 2rem;
+}
+
+.post__date span {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.post__title {
+  font-size: 1.5rem;
+  font-weight: 1000;
+  margin-bottom: .5rem;
+  margin-top: 0rem;
+  text-transform: uppercase;
+  color: #6f4e37;
+}
+
+.post__text {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+.post__link {
+  cursor: pointer;
+  font-style: normal;
+  border-radius: 0.3rem;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #fff;
+  border: 2px solid #6f4e37;
+  color: #6f4e37 !important;
+  box-shadow: 0 0.05em 0.1em rgba(0, 0, 0, 0.25);
+}
+.post__link:hover {
+  transition: 0.5s;
+  background-color: #6f4e37 !important;
+  border: 1px solid #6f4e37;
+  color: #fff !important;
+}
+
+@media only screen and (max-width: 800px) {
+  .post {
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 0.8rem;
+    padding-bottom: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .post__img {
+    flex: 1;
+    padding: 0rem 1rem 0rem 1rem;
+  }
+
+  .post__img img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.8rem;
+    transform: translateY(-20px);
+    box-shadow: 1rem 1.4rem 8rem rgba(0, 0, 0, 0.5);
+  }
+
+  .post__info {
+    flex: 2;
+    padding: 0rem 1rem 0rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .post {
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 0.8rem;
+    padding-bottom: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .post__img {
+    flex: 1;
+    padding: 0rem 1rem 0rem 1rem;
+  }
+
+  .post__img img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.8rem;
+    transform: translateY(-20px);
+    box-shadow: 1rem 1.4rem 8rem rgba(0, 0, 0, 0.5);
+  }
+
+  .post__info {
+    flex: 2;
+    padding: 0rem 1rem 0rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .post {
+    background-color: white;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 0.8rem;
+    padding-bottom: 2rem;
+  }
+
+  .post__img {
+    flex: 1;
+    min-width: 20rem;
+    max-width: 20rem;
+    padding-left: 0rem;
+  }
+
+  .post__img img {
+    min-width: 20rem;
+    max-width: 20rem;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.8rem;
+    transform: translateY(-20px);
+    box-shadow: 1rem 1.4rem 8rem rgba(0, 0, 0, 0.5);
+  }
+
+  .post__info {
+    flex: 2;
+    padding: 0rem 1rem 0rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .post {
+    background-color: white;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 0.8rem;
+    padding-bottom: 2rem;
+  }
+
+  .post__img {
+    flex: 1;
+    min-width: 20rem;
+    max-width: 20rem;
+    padding-left: 0rem;
+  }
+
+  .post__img img {
+    min-width: 20rem;
+    max-width: 20rem;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.8rem;
+    transform: translateY(-20px);
+    box-shadow: 1rem 1.4rem 8rem rgba(0, 0, 0, 0.5);
+  }
+
+  .post__info {
+    flex: 2;
+    padding: 0rem 1rem 0rem 1rem;
+  }
+}

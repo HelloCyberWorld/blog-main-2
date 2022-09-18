@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  background-color: #fffffff0;
+  position: relative;
+  min-height: 100vh;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.09);
+  transition: 0.5s;
+  z-index: 10;
+}
+
+header.sticky {
+  height: 30px;
+  transition: 0.5s;
+}
+.menuToggle.sticky {
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+  transition: 0.5s;
+}
+.icon {
+  margin-top: .3rem;
+  margin-left: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+.icon img {
+  width: 32px;
+  height: 32px;
+  margin-left: 0.5rem;
+  position: relative;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+header .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1rem;
+  color: black;
+  text-decoration: none;
+  font-weight: 700px;
+  font-size: 40px;
+  font-family: 'Lobster';
+  z-index: 10;
+  transition: 0.5s;
+}
+
+.icon.sticky img {
+  width: 18px;
+  height: 18px;
+  transition: 0.5s;
+  margin-left: 0.1rem;
+}
+
+header .logo.sticky {
+  font-size: 22px;
+  transition: 0.5s;
+}
+
+header .logo span {
+  font-weight: 700px;
+}
+
+.navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+}
+
+.navigation li {
+  position: relative;
+  list-style: none;
+  margin-right: 1rem;
+  padding: 0.4rem;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navigation li.active {
+  border-bottom: 2px solid #6f4e37;
+}
+
+.navigation li:hover {
+  border-bottom: 2px solid #6f4e37;
+}
+
+.menuToggle {
+  position: fixed;
+  right: 0;
+  margin-right: 1rem;
+  width: 30px;
+  height: 30px;
+  background: url(../images/bars.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  visibility: hidden;
+  transition: 0.5s;
+  z-index: 10;
+}
+.menuToggle.active {
+  background: url(../images/menu-close.png);
+  background-size: 28px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .menuToggle {
+    visibility: visible;
+  }
+  .navigation {
+    visibility: hidden;
+  }
+  .navigation.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    visibility: visible;
+    z-index: 9;
+  }
+
+  .navigation.active li {
+    border-bottom: none;
+  }
+
+  body.active {
+    overflow: hidden;
+  }
+}

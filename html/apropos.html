@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber café</title>
+    <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="/css/latests.css" />
+    <link rel="stylesheet" type="text/css" href="/css/post_card.css" />
+    <link rel="stylesheet" type="text/css" href="/css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="/css/apropos.css" />
+    
+  <body>
+    <header>
+      <a href="#" class="logo"
+        >cybercafé
+        <div class="icon">
+          <img src="/images/coffee-beans (1).png" alt="">
+        </div>
+      </a>
+      <div class="menuToggle"></div>
+      <ul class="navigation">
+        <li id="1"><a href="/html/index.html">Accueil</a></li>
+        <li id="2"><a href="/html/articles.html">Articles</a></li>
+        <li id="3"><a href="/html/apropos.html">A propos</a></li>
+        <li id="4"><a href="/html/contact.html">Contact</a></li>
+      </ul>
+    </header>
+
+    <!-- A propos -->
+    
+
+    <footer>
+      <a href="#" class="logo__footer">cybercafé</a>
+      <ul class="socials">
+        <li><a href="" class="linkedin"><i class="fa fa-linkedin-square"></i></a></li>
+      </ul>
+      <ul class="footer__navigation">
+        <li><a href="/html/index.html">Accueil</a></li>
+        <li><a href="/html/articles.html">Articles</a></li>
+        <li><a href="/html/apropos.html">A propos</a></li>
+        <li><a href="html/contact.html">Contact</a></li>
+      </ul>
+      <div class="footer__bottom">
+        <p class="copyright">copyright &copy;2022 cybercafé. designed by <span>Nassim Benmalek & Amine Bouzid</span></p>
+      </div>
+    </footer>
+
+    
+
+    <script>
+      const menuToggle = document.querySelector(".menuToggle");
+      const navgation = document.querySelector(".navigation");
+      const body = document.querySelector("body");
+
+      menuToggle.onclick = function () {
+        menuToggle.classList.toggle("active");
+        navgation.classList.toggle("active");
+        body.classList.toggle("active");
+      };
+
+      window.addEventListener("resize", function () {
+        const navgation = document.querySelector(".navigation");
+        const body = document.querySelector("body");
+        if (window.screen.width > 700) {
+          menuToggle.classList.remove("active");
+          navgation.classList.remove("active");
+          body.classList.remove("active");
+        }
+      });
+
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        const menuToggle = document.querySelector(".menuToggle");
+        const logo = document.querySelector(".logo");
+        const icon = document.querySelector(".icon");
+        header.classList.toggle("sticky", window.scrollY > 0);
+        logo.classList.toggle("sticky", window.scrollY > 0);
+        menuToggle.classList.toggle("sticky", window.scrollY > 0);
+        icon.classList.toggle("sticky", window.scrollY > 0);
+      });
+    </script>
+  </body>
+</html>
